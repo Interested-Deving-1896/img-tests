@@ -1,30 +1,75 @@
-# Here be dragons 🔥🐉
+[update-readmes]   Mode: rewrite — migrating to template structure...
+# img-tests
 
-🚨🚧🚧🚧🚨
+[![Built with Ona](https://ona.com/build-with-ona.svg)](https://app.ona.com/#https://github.com/Interested-Deving-1896/img-tests)
 
-As AerynOS is under heavy development, the image generation scripts in this repository are provided as is,
-with no explicit or implied warranty or support.
+<!-- AI:start:what-it-does -->
+_Description pending._
+<!-- AI:end:what-it-does -->
 
-If you break your computer because you used these scripts or AerynOS in its current state, you get to keep both pieces.
+## Architecture
 
-## Build an ISO (can be used as an installer)
+<!-- AI:start:architecture -->
+_Architecture documentation pending._
+<!-- AI:end:architecture -->
 
-    just compression=zstd3 build
-    # run 'just help' to see available recipes and options
+## Install
 
-## Build and boot an ISO for quick smoke testing
+<!-- Add installation instructions here. This section is yours — the AI will not modify it. -->
 
-    just compression=zstd3 build-and-boot
+```bash
+git clone https://github.com/Interested-Deving-1896/img-tests.git
+cd img-tests
+```
 
-If you need to update the firmware path:
+## Usage
 
-    just compression=zstd3 firmware="<some path to OVMF_CODE.fd or OVMF_CODE.4m.fd>" build-and-boot
+<!-- Add usage examples here. This section is yours — the AI will not modify it. -->
 
-## Manually create an installable / booting desktop image
+## Configuration
 
-    cd desktop/
-    sudo ./img.sh
-    truncate -s 10G disk.img
-    qemu-system-x86_64 -enable-kvm -m 4096m -cdrom aosvalidator.iso -drive if=pflash,format=raw,readonly=on,file=/usr/share/qemu/edk2-x86_64-code.fd -device virtio-vga-gl -display sdl,gl=on -cpu host -serial stdio -device virtio-blk-pci,drive=main -drive id=main,if=none,file=disk.img,format=raw -boot c
+<!-- Document configuration options here. This section is yours — the AI will not modify it. -->
 
-Drop the `-boot c` after you've booted the VM, formatted with `fdisk` and installed with `sudo lichen`
+## CI
+
+<!-- AI:start:ci -->
+_CI documentation pending._
+<!-- AI:end:ci -->
+
+## Mirror chain
+
+<!-- AI:start:mirror-chain -->
+This repo is maintained in [`Interested-Deving-1896/img-tests`](https://github.com/Interested-Deving-1896/img-tests) and mirrored through:
+
+```
+Interested-Deving-1896/img-tests  ──►  OpenOS-Project-OSP/img-tests  ──►  OpenOS-Project-Ecosystem-OOC/img-tests
+```
+
+Changes flow downstream automatically via the hourly mirror chain in
+[`fork-sync-all`](https://github.com/Interested-Deving-1896/fork-sync-all).
+Direct commits to OSP or OOC are detected and opened as PRs back to `Interested-Deving-1896`.
+<!-- AI:end:mirror-chain -->
+
+## Contributors
+
+<!-- AI:start:contributors -->
+_Contributors pending._
+<!-- AI:end:contributors -->
+
+## Origins
+
+<!-- AI:start:origins -->
+_Original project — no upstream fork._
+<!-- AI:end:origins -->
+
+## Resources
+
+<!-- AI:start:resources -->
+_No additional resource files found._
+<!-- AI:end:resources -->
+
+## License
+
+<!-- AI:start:license -->
+<!-- License not detected — add a LICENSE file to this repo. -->
+<!-- AI:end:license -->
